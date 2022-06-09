@@ -86,10 +86,6 @@ button:hover {
   color: var(--accent-color);
 }
 
-/* .header-link {
-  position: relative;
-} */
-
 .header .link.current::after {
   content: "";
   position: absolute;
@@ -101,7 +97,7 @@ button:hover {
   bottom: -32px;
 }
 
-.header .header .logo {
+.header .logo {
   margin-right: 93px;
 }
 .logo {
@@ -217,60 +213,6 @@ button:hover {
   color: #ffffff;
 }
 
-/* Modal window */
-.backdrop {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  position: fixed;
-  top: 0;
-  transition: opacity 300ms, visibility 300ms;
-}
-
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0);
-}
-.modal {
-  width: 528px;
-  min-height: 581px;
-  background-color: #ffffff;
-  border-radius: 4px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  transition: transform 300ms;
-}
-.close-btn {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: transparent;
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  display: flex;
-  align-items: center;
-}
-.close-btn:hover,
-.close-btn:focus {
-  background: transparent;
-  cursor: pointer;
-  transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
-  transition-duration: 250ms;
-}
-.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
-.no-scroll {
-  overflow: hidden;
-}
 /* ------------Portfolio.html------------ */
 
 .filter-list .button.current {
@@ -358,6 +300,7 @@ button:hover {
 }
 
 /*---------------Index.html-------------- */
+
 /* hero */
 .hero {
   background-color: #2f303a;
@@ -408,20 +351,6 @@ button:hover {
   transition-duration: 250ms;
 }
 
-/* .project-link:hover,
-.project-link:focus {
-  display: block;
-  cursor: pointer;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
-  transition-duration: 250ms;
-}
-.project-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -15px;
-} */
 .card-top-wrap:hover .card-top-text {
   transform: translateY(0);
   transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
@@ -441,11 +370,11 @@ button:hover {
   text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  padding: 27px 82px;
-  /* height: 100%; */
+
+  width: 100%;
+  padding: 27px 0;
+  left: 0;
   background-color: rgba(47, 48, 58, 0.8);
-  /* transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 /* Features */
@@ -495,18 +424,22 @@ button:hover {
 }
 
 .feature-icon--satelite::before {
+  content: "";
   background-image: url(../images/satelite.svg);
 }
 
 .feature-icon--clock::before {
+  content: "";
   background-image: url(../images/clock.svg);
 }
 
 .feature-icon--diagram::before {
+  content: "";
   background-image: url(../images/diagram.svg);
 }
 
 .feature-icon--astrounaut::before {
+  content: "";
   background-image: url(../images/astronaut.svg);
 }
 
@@ -621,4 +554,62 @@ button:hover {
 }
 .clients-icon {
   fill: currentColor;
+}
+
+/* Modal window */
+.backdrop {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  transition: opacity 300ms, visibility 300ms;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+}
+.modal {
+  width: 528px;
+  min-height: 581px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: transform 300ms;
+}
+.close-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.close-btn:hover,
+.close-btn:focus {
+  background: transparent;
+  cursor: pointer;
+  transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
+  transition-duration: 250ms;
+}
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
